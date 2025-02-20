@@ -1,0 +1,72 @@
+
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{color,soul}
+\usepackage{setspace}
+\usepackage{authblk}
+%\usepackage{natbib}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{hyperref}
+\usepackage[backend=biber,style=aglcv3]{biblatex}
+	\bibliography{references}
+
+\usepackage{titlesec}
+  \renewcommand{\thesection}{\Roman{section}}
+  \renewcommand{\thesubsection}{\Alph{subsection}}
+  \renewcommand{\thesubsubsection}{\arabic{subsubsection}}
+  \renewcommand{\theparagraph}{(\alph{paragraph})}
+  \renewcommand{\thesubparagraph}{(\roman{subparagraph})}
+  \titleformat{\section}{\centering\sc}{\thesection}{0.5em}{}
+  \titleformat{\subsection}{\centering\it}{\normalfont\thesubsection}{0.5em}{}
+  \titleformat{\subsubsection}{\it}{\normalfont\thesubsubsection}{0.5em}{}
+  \titleformat{\paragraph}{\it}{\theparagraph}{0.5em}{}
+  \titleformat{\subparagraph}{\it}{\thesubparagraph}{0.5em}{}
+  \titlespacing{\section}{0pt}{12pt}{12pt}
+  \titlespacing{\subsection}{0pt}{12pt}{12pt}
+  \titlespacing{\subsubsection}{0pt}{12pt}{12pt}
+  \titlespacing{\paragraph}{0pt}{12pt}{12pt}
+  \titlespacing{\subparagraph}{0pt}{12pt}{12pt}
+		
+\setcounter{secnumdepth}{5}
+
+\makeatletter
+    \def\@maketitle{%
+  \begin{center}%
+  \let \footnote \thanks
+    {\textbf{\MakeUppercase\@title}}%
+    \vskip 20em%
+    {\textsc\@author}
+    \newpage%
+  \end{center}}
+\makeatother
+\title{Note for Evidence}
+\author[1]{Xiaoyu O. Wu}
+%\author[3]{Xiaoyu O. Wu}
+%\author[4]{Xiaoyu O. Wu}
+
+\affil{Griffith University}
+\date{T3 2024}
+
+\begin{document}
+\onehalfspacing
+\maketitle
+\input{section/evidence}
+
+%\input{section/Workshop}
+
+
+
+
+%\input{section/Method}
+
+%\input{section/Outcome}
+
+%\input{section/Discussion}
+
+
+%\bibliographystyle{apalike}
+%\bibliography{references}
+
+
+\end{document}
